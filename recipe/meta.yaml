@@ -1,3 +1,4 @@
+{% set org = "tdegeus" %}
 {% set name = "FrictionQPotSpringBlock" %}
 {% set version = "0.3.1" %}
 
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/tdegeus/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 3fdea068e1d49ad9aab9acdb12ceb343ffaeda1ca0ae341e008dc8b73c5130eb
 
 build:
@@ -18,10 +19,10 @@ requirements:
     - cmake
     - make  # [unix]
   host:
+    - setuptools_scm
     - xtensor
     - qpot
     - goosefem
-    - setuptools_scm
   run:
     - xtensor
     - qpot
@@ -36,14 +37,14 @@ test:
     - if exist %LIBRARY_PREFIX%\lib\cmake\{{ name }}Config.cmake (exit 0) else (exit 1)  # [win]
 
 about:
-  home: https://github.com/tdegeus/{{ name }}
+  home: https://github.com/{{ org }}/{{ name }}
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Spring-block friction model.
   description: Spring-block friction model.
-  doc_url: https://tdegeus.github.io/{{ name }}
-  dev_url: https://github.com/tdegeus/{{ name }}
+  doc_url: https://{{ org }}.github.io/{{ name }}
+  dev_url: https://github.com/{{ org }}/{{ name }}
 
 extra:
   recipe-maintainers:
