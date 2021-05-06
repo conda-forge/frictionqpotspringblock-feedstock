@@ -67,6 +67,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-frictionqpotspringblock-green.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--frictionqpotspringblock-green.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) |
 
 Installing frictionqpotspringblock
 ==================================
@@ -75,12 +76,13 @@ Installing `frictionqpotspringblock` from the `conda-forge` channel can be achie
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `frictionqpotspringblock` can be installed with:
+Once the `conda-forge` channel has been enabled, `frictionqpotspringblock, python-frictionqpotspringblock` can be installed with:
 
 ```
-conda install frictionqpotspringblock
+conda install frictionqpotspringblock python-frictionqpotspringblock
 ```
 
 It is possible to list all of the versions of `frictionqpotspringblock` available on your platform with:
