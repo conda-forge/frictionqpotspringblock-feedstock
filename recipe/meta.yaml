@@ -58,7 +58,8 @@ outputs:
         - python
         - pip
         - setuptools_scm
-        - pyxtensor
+        - xtensor-python
+        - numpy
         - qpot
         - goosefem
       run:
