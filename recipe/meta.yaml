@@ -13,7 +13,6 @@ source:
 build:
   number: 0
   script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  skip: true  # [py<39 and osx and not x86_64]
 
 outputs:
 
