@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "FrictionQPotSpringBlock" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +8,12 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 726e80959b4fbe8aa115eb831203558cb5a5edc0092aaa86e179e7bb4e9f0510
+  sha256: a832980dc90c0b84fa08f92aecce0eabc0e6bd19273b6f6c8aa70da0799c414f
 
 build:
   number: 0
   script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+  skip: true  # [py<39 and osx and not x86_64]
 
 outputs:
 
@@ -23,14 +24,10 @@ outputs:
 
     requirements:
       build:
-        - python                                 # [build_platform != target_platform]
-        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-        - numpy                                  # [build_platform != target_platform]
         - {{ compiler('cxx') }}
         - cmake
         - make  # [unix]
       host:
-        - setuptools_scm
         - xtensor
         - qpot
         - goosefem
@@ -54,6 +51,10 @@ outputs:
 
     requirements:
       build:
+        - python                              # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}  # [build_platform != target_platform]
+        - numpy                               # [build_platform != target_platform]
+        - setuptools_scm                      # [build_platform != target_platform]
         - {{ compiler('cxx') }}
         - cmake
         - ninja
