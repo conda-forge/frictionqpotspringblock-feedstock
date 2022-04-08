@@ -1,19 +1,17 @@
 {% set org = "tdegeus" %}
 {% set name = "FrictionQPotSpringBlock" %}
-{% set version = "0.6.8" %}
+{% set version = "0.7.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-split
   version: {{ version }}
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 990033f59cf4bd3431d568610d99ff37cb9b63d4352ce704acfe1275c6ce97c3
+  sha256: 729458027a23998eed570b3a6826bb9e44fd2cdf5742c8d74db3f9aef239ebff
 
 build:
-  number: 1
-  script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
-  skip: True  # [python_impl == 'pypy']
+  number: 0
 
 outputs:
 
@@ -21,6 +19,9 @@ outputs:
 
     script: install.sh  # [unix]
     script: install.bat  # [win]
+
+    build:
+      script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
 
     requirements:
       build:
@@ -49,6 +50,10 @@ outputs:
     script: install_python.sh  # [unix]
     script: install_python.bat  # [win]
 
+    build:
+      script_env: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+      skip: true  # [python_impl == 'pypy']
+
     requirements:
       build:
         - python                              # [build_platform != target_platform]
@@ -57,12 +62,14 @@ outputs:
         - setuptools_scm                      # [build_platform != target_platform]
         - {{ compiler('cxx') }}
         - cmake
+        - make  # [unix]
         - ninja
       host:
         - goosefem
         - numpy *
         - pip
         - pybind11
+        - pybind11-abi
         - python
         - qpot
         - scikit-build
@@ -78,7 +85,7 @@ outputs:
         - {{ name }}
       commands:
         - pip check
-        - python -c "import {{ name }}; {{ name }}.version()"
+        - python -c "import {{ name }}; assert {{ name }}.version() == '{{ version }}'"
       requires:
         - pip
 
