@@ -1,5 +1,5 @@
-About frictionqpotspringblock
-=============================
+About frictionqpotspringblock-split
+===================================
 
 Home: https://github.com/tdegeus/FrictionQPotSpringBlock
 
@@ -33,17 +33,17 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python_implcpython</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12251&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/frictionqpotspringblock-feedstock?branchName=main&jobName=linux&configuration=linux_64_python_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/frictionqpotspringblock-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_python_implcpython</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=12251&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/frictionqpotspringblock-feedstock?branchName=main&jobName=osx&configuration=osx_64_python_implcpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/frictionqpotspringblock-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -76,10 +76,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-frictionqpotspringblock-green.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/frictionqpotspringblock) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-python--frictionqpotspringblock-green.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-frictionqpotspringblock.svg)](https://anaconda.org/conda-forge/python-frictionqpotspringblock) |
 
-Installing frictionqpotspringblock
-==================================
+Installing frictionqpotspringblock-split
+========================================
 
-Installing `frictionqpotspringblock` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `frictionqpotspringblock-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -165,17 +165,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating frictionqpotspringblock-feedstock
-==========================================
+Updating frictionqpotspringblock-split-feedstock
+================================================
 
-If you would like to improve the frictionqpotspringblock recipe or build a new
+If you would like to improve the frictionqpotspringblock-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/frictionqpotspringblock-feedstock are
+Note that all branches in the conda-forge/frictionqpotspringblock-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
