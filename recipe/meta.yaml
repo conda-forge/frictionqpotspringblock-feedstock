@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "FrictionQPotSpringBlock" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1ba43e01ecb8fca9a69d43983b4453cf748948b84b6929f51f6663a9bfd9def0
+  sha256: c9be5fca3b8eadb36a6d0cf09dc1f5e5e81222fe8a33d5cecc4e3942f1b4bf7a
 
 build:
   number: 0
