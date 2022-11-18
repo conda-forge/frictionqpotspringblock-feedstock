@@ -1,6 +1,6 @@
 {% set org = "tdegeus" %}
 {% set name = "FrictionQPotSpringBlock" %}
-{% set version = "0.17.1" %}
+{% set version = "0.18.0" %}
 
 package:
   name: {{ name|lower }}-split
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/{{ org }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: d41b3a4acbf61df5b6d72252bff4f3b5d1753124539d4f6ee566660bbfbe11d1
+  sha256: b45749d04659418f95c9dab768b4bcd4ab419b24086ae5c51ead0714942f1836
 
 build:
   number: 1
@@ -31,12 +31,12 @@ outputs:
       host:
         - gmattensor >0.10.1
         - goosefem
-        - qpot >=0.12.1
+        - prrng >=1.7.1
         - xtensor >=0.24.2
       run:
         - gmattensor >0.10.1
         - goosefem
-        - qpot >=0.12.1
+        - prrng >=1.7.1
         - xtensor >=0.24.2
 
     test:
@@ -71,10 +71,11 @@ outputs:
         - goosefem
         - numpy *
         - pip
+        - prrng >=1.7.1
         - pybind11
         - pybind11-abi
         - python
-        - qpot >=0.12.1
+        - python-prrng >=1.7.1
         - scikit-build
         - setuptools_scm
         - xtensor >=0.24.2
@@ -82,6 +83,7 @@ outputs:
       run:
         - numpy *
         - python
+        - python-prrng >=1.7.1
 
     test:
       imports:
