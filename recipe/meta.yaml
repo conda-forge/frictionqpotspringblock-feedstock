@@ -76,7 +76,7 @@ outputs:
         - pybind11-abi
         - python
         - python-prrng >=1.7.1
-        - scikit-build <0.16.0
+        - scikit-build
         - setuptools_scm
         - xtensor >=0.24.2
         - xtensor-python
