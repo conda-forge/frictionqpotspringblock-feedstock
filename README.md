@@ -1,11 +1,11 @@
-About frictionqpotspringblock-split
-===================================
+About frictionqpotspringblock-split-feedstock
+=============================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/frictionqpotspringblock-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tdegeus/FrictionQPotSpringBlock
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/frictionqpotspringblock-feedstock/blob/main/LICENSE.txt)
 
 Summary: Spring-block friction model.
 
